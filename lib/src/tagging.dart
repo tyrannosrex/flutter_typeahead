@@ -201,7 +201,7 @@ class _FlutterTaggingState<T extends Taggable> extends State<FlutterTagging<T>> 
           hideSuggestionsOnKeyboardHide: widget.suggestionsBoxConfiguration.hideSuggestionsOnKeyboardHide,
           keepSuggestionsOnLoading: widget.suggestionsBoxConfiguration.keepSuggestionsOnLoading,
           keepSuggestionsOnSuggestionSelected: widget.suggestionsBoxConfiguration.keepSuggestionsOnSuggestionSelected,
-          suggestionsBoxController: widget.suggestionsBoxConfiguration.suggestionsBoxController!,
+          suggestionsBoxController: widget.suggestionsBoxConfiguration.suggestionsBoxController,
           suggestionsBoxDecoration: widget.suggestionsBoxConfiguration.suggestionsBoxDecoration,
           suggestionsBoxVerticalOffset: widget.suggestionsBoxConfiguration.suggestionsBoxVerticalOffset,
           errorBuilder: widget.errorBuilder,
@@ -212,7 +212,7 @@ class _FlutterTaggingState<T extends Taggable> extends State<FlutterTagging<T>> 
                 height: 3.0,
                 child: LinearProgressIndicator(),
               ),
-          noItemsFoundBuilder: widget.emptyBuilder!,
+          noItemsFoundBuilder: widget.emptyBuilder,
           textFieldConfiguration: widget.textFieldConfiguration.copyWith(
             focusNode: _focusNode,
             controller: _textController,
